@@ -23,11 +23,11 @@ namespace KakaotalcRemoveString
             this.Close();
         }
 
-        private void btnConvert_Click(object sender, EventArgs e)
+        private void TextBox1_TextChanged(object sender, EventArgs e)
         {
-            string pattern = @"\[.+\]\s\[.{2}.\d+:\d{2}\]\s";
+            string pattern = @"\[.+\].+\[.{2}.\d+:\d{2}\]\s";
 
-            textBox2.Text = Regex.Replace(textBox1.Text, pattern, "", RegexOptions.Multiline);
+            textBox2.Text = Regex.Replace(textBox1.Text, pattern, "",RegexOptions.None);
         }
     }
 }
